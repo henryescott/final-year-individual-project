@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:~/CM2102CourseworkMarkerDEMO</property>
+        <property name="connection.username">sa</property>
+        <property name="connection.password">p1mZS3r*e!0kbQk8DVPeFgJOs4w0HESC%MC0a4$L068KYRlB2qFq</property>
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="model.YearGroup"/>
+        <mapping class="model.Submission"/>
+        <mapping class="model.Question"/>
+        <mapping class="model.Answer"/>
+        <mapping class="model.ConnectionSetting"/>
+    </session-factory>
+</hibernate-configuration>
+

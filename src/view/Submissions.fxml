@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import org.controlsfx.control.textfield.TextFields?>
+<?import util.CommonComponents?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<ToolBar BorderPane.alignment="CENTER">
+			<items>
+				<Label text="Year Group:" />
+				<CommonComponents fx:id="selectYear" fx:factory="yearGroupComboBox" />
+				<Label text="Student Number:" />
+				<TextFields fx:id="searchBox" promptText="Student Number" fx:factory="createClearableTextField" />
+				<Pane HBox.hgrow="ALWAYS" />
+				<MenuButton fx:id="slection" text="Selection">
+					<items>
+						<MenuItem fx:id="selectAll" text="Select All" />
+						<MenuItem fx:id="selectUnmarked" text="Select Unmarked" />
+						<SeparatorMenuItem />
+						<MenuItem fx:id="deselectAll" text="Deselect All" />
+					</items>
+				</MenuButton>
+				<Button fx:id="exportMarks" text="Export Marks" />
+				<Button fx:id="markSubmissions" text="Mark Submissions" />
+			</items>
+		</ToolBar>
+	</top>
+	<center>
+		<AnchorPane>
+			<children>
+				<TableView fx:id="submissionsTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<columnResizePolicy>
+						<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+					</columnResizePolicy>
+					<columns>
+						<TableColumn fx:id="studentNoColumn" text="Student Number" />
+						<TableColumn fx:id="markColumn" text="Mark" />
+						<TableColumn fx:id="viewSubmissionColumn" sortable="false" text="View Submission" />
+						<TableColumn fx:id="deleteSubmissionColumn" sortable="false" text="Delete Submission" />
+					</columns>
+				</TableView>
+			</children>
+		</AnchorPane>
+	</center>
+	<bottom>
+		<HBox alignment="BOTTOM_RIGHT" BorderPane.alignment="CENTER_RIGHT">
+			<BorderPane.margin>
+				<Insets right="5.0" />
+			</BorderPane.margin>
+			<children>
+				<Label fx:id="showingCountText" />
+				<Label text=" Submission(s) Showing" />
+				<Label fx:id="selectedCountText">
+					<HBox.margin>
+						<Insets left="15.0" />
+					</HBox.margin>
+				</Label>
+				<Label text=" Submission(s) Selected" />
+			</children>
+		</HBox>
+	</bottom>
+</BorderPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu text="File">
+					<items>
+						<MenuItem fx:id="importSubmissions" text="Import Submissions" />
+						<SeparatorMenuItem />
+						<MenuItem fx:id="settings" text="Database Settings" />
+						<SeparatorMenuItem />
+						<MenuItem fx:id="close" text="Close" />
+					</items>
+				</Menu>
+				<Menu text="View">
+					<items>
+						<MenuItem fx:id="yearGroups" text="Year Groups" />
+						<MenuItem fx:id="questions" text="Questions" />
+						<MenuItem fx:id="submissions" text="Submissions" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<TabPane fx:id="tabPane" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER" />
+	</center>
+</BorderPane>

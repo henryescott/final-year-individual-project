@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<TableView fx:id="answersTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+			<columns>
+				<TableColumn fx:id="studentNoColumn" sortable="false" text="Student Number" />
+				<TableColumn fx:id="questionNoColumn" text="Question No." />
+				<TableColumn fx:id="maxMarkColumn" editable="false" text="Maximum Mark Available" />
+				<TableColumn fx:id="markColumn" text="Mark" />
+				<TableColumn fx:id="feedbackColumn" sortable="false" text="Feedback" />
+				<TableColumn fx:id="viewResultsComparison" sortable="false" text="View Answer" />
+			</columns>
+		</TableView>
+	</children>
+</AnchorPane>

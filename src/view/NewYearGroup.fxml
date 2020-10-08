@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.TextFields?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<ToolBar BorderPane.alignment="CENTER">
+			<items>
+				<Pane HBox.hgrow="ALWAYS" />
+				<Button fx:id="save" text="Save" />
+			</items>
+		</ToolBar>
+	</top>
+	<center>
+		<HBox alignment="CENTER">
+			<BorderPane.margin>
+				<Insets top="25.0" />
+			</BorderPane.margin>
+			<children>
+				<GridPane hgap="10.0" vgap="10.0">
+					<children>
+						<Label text="Academic Year:" GridPane.halignment="RIGHT" />
+						<HBox GridPane.columnIndex="1">
+							<children>
+								<TextFields fx:id="academicYear" promptText="Academic Year"
+									GridPane.columnIndex="1" fx:factory="createClearableTextField" />
+								<Label text="/ ">
+									<HBox.margin>
+										<Insets left="5.0" />
+									</HBox.margin>
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+								<Label fx:id="yearEnd">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+							</children>
+						</HBox>
+					</children>
+				</GridPane>
+			</children>
+		</HBox>
+	</center>
+</BorderPane>
